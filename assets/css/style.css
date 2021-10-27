@@ -2,8 +2,12 @@ body {
     background-color: antiquewhite;
 }
 
-textarea {
+#results {
     min-height: 75vh;
+}
+
+#descInput{
+    min-height: 50vh;
 }
 
 #resultsDisplay {

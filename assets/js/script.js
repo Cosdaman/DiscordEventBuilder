@@ -7,6 +7,7 @@ results = $("#results");
 faraamQuoteDisplay = $("#faraamQuote");
 
 
+
 let faraamQuotes = [
     "why are you wearing pants?"
 ]
@@ -15,10 +16,13 @@ function submitClick() {
 
     let timeInput = dayjs(dateTime.val());
     let titleInput = $("#titleInput").val();
+    let descInput = $("#descInput").val();
+    console.log(descInput)
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":F>";
         results.text(epochTime +"\n" + "\n"
-        + titleInput); 
+        + titleInput + "\n" + "\n"
+        + descInput); 
     }
     else{
         alert("Please select a valid date and time.")
