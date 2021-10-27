@@ -5,3 +5,7 @@ body{
 #resultsDisplay{
     font-size: larger;
 }
+
+textarea{
+    min-height: 50vh;
+}
