@@ -7,8 +7,8 @@ It is designed with the intention to lessen the need to visit the epoch time web
   
   
 Feel free to DM me for suggestions, you can reach me here:  
-Discord: Cosdaman#0001
-Twitter: @Cosdaman
+- Discord: Cosdaman#0001  
+- Twitter: @Cosdaman  
 
 
 Link to page:  
