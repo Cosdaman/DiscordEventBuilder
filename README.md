@@ -1,4 +1,4 @@
-# DiscordEventBuilder
+# Basic Discord Event Builder
 
 Description:  
   
