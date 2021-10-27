@@ -17,7 +17,6 @@ function submitClick() {
     let titleInput = $("#titleInput").val();
     let descInput = $("#descInput").val();
     let timeFormat = $("#timeFormat").val();
-    console.log(timeFormat)
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":"+timeFormat+">";
         results.text(epochTime +"\n" + "\n"
