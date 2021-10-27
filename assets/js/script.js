@@ -28,6 +28,13 @@ function submitClick() {
         alert("Please select a valid date and time.")
     }
 }
+
+kofiWidgetOverlay.draw('cosdaman', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Tip Me',
+    'floating-chat.donateButton.background-color': '#00b9fe',
+    'floating-chat.donateButton.text-color': '#fff'
+});
     
 faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
 
