@@ -15,11 +15,24 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-lg-4" id="userInput">
+            <div class="col-sm-12 col-lg-5" id="userInput">
                 <p>
                     The date and time displayed is in your local time.
                     <br>Date and time of the event (Required):
                     <input id="dateTime" type="datetime-local" name="partydate">
+                </p>
+                <p>
+                    Discord Time Post Format:
+                    <br>
+                    <select id="timeFormat" class="form-select" aria-label="Default select example">
+                        <option value="f">January 1, 1969 4:20PM</option>
+                        <option selected value="F">Wednesday, January 1, 1969 4:20PM</option>
+                        <option value="d">01/01/1969</option>
+                        <option value="D">January 1, 1969</option>
+                        <option value="t">4:20 PM</option>
+                        <option value="T">4:20:00 PM</option>
+                        <option value="R">40 years ago (relative time)</option>
+                    </select>
                 </p>
                 <p>
                     Title of the event (Optional):
@@ -32,7 +45,7 @@
                 <button id="submitBtn" type="button" class="btn btn-secondary btn-lg">Submit</button>
             </div>
 
-            <div class="col-sm-12 col-lg-8" id="resultsDisplay">
+            <div class="col-sm-12 col-lg-7" id="resultsDisplay">
                 <div class="row" id="resultsDiv">
                     <p class="col">Results: </p>
                     <textarea onfocus="this.select()" readonly id="results"></textarea>

@@ -7,7 +7,6 @@ results = $("#results");
 faraamQuoteDisplay = $("#faraamQuote");
 
 
-
 let faraamQuotes = [
     "why are you wearing pants?"
 ]
@@ -17,9 +16,10 @@ function submitClick() {
     let timeInput = dayjs(dateTime.val());
     let titleInput = $("#titleInput").val();
     let descInput = $("#descInput").val();
-    console.log(descInput)
+    let timeFormat = $("#timeFormat").val();
+    console.log(timeFormat)
     if (dayjs(timeInput).isValid()) {
-        let epochTime = "<t:" + dayjs(timeInput).unix() + ":F>";
+        let epochTime = "<t:" + dayjs(timeInput).unix() + ":"+timeFormat+">";
         results.text(epochTime +"\n" + "\n"
         + titleInput + "\n" + "\n"
         + descInput); 
