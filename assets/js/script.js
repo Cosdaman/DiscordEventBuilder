@@ -13,6 +13,7 @@ function submitClick() {
 
     let timeInput = dayjs(dateTime.val());
     if (dayjs(timeInput).isValid()) {
-        results.text(dayjs(timeInput).unix());
+        let epochTime = "<t:" + dayjs(timeInput).unix() + ":F>"
+        results.text(epochTime);
     }
 }

@@ -13,19 +13,21 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-4" id="userInput">
-            <p>
-                The date and time displayed is in your local time.
-                <br><br>Date and time of the event: <input id="dateTime" type="datetime-local" name="partydate">
-            </p>
-            <button id="submitBtn" type="button" class="btn btn-secondary btn-lg">Submit</button>
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4" id="userInput">
+                <p>
+                    The date and time displayed is in your local time.
+                    <br><br>Date and time of the event: <input id="dateTime" type="datetime-local" name="partydate">
+                </p>
+                <button id="submitBtn" type="button" class="btn btn-secondary btn-lg">Submit</button>
+            </div>
 
-        <div class="col-8" id="resultsDisplay">
-            <div class="row" id="resultsDiv">
-                <p class="col">Results: </p>
-                <textarea id="results"></textarea>
+            <div class="col-sm-12 col-lg-8" id="resultsDisplay">
+                <div class="row" id="resultsDiv">
+                    <p class="col">Results: </p>
+                    <textarea id="results"></textarea>
+                </div>
             </div>
         </div>
     </div>
