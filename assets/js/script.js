@@ -18,18 +18,20 @@ function submitClick() {
     let descInput = $("#descInput").val();
     let timeFormat = $("#timeFormat").val();
     if (dayjs(timeInput).isValid()) {
-        let epochTime = "<t:" + dayjs(timeInput).unix() + ":"+timeFormat+">";
-        results.text(epochTime +"\n" + "\n"
-        + titleInput + "\n" + "\n"
-        + descInput); 
+        let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
+
+        results.text(
+            epochTime + "\n\n"
+            + "**" + titleInput + "**" + "\n\n"
+            + "```"+descInput+"```");
     }
-    else{
+    else {
         alert("Please select a valid date and time.")
     }
 }
 
 
-    
+
 faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
 
 submitBtn.click(submitClick);
