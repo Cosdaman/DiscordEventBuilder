@@ -4,10 +4,12 @@ console.log("js script connected")
 dateTime = $("#dateTime");
 submitBtn = $("#submitBtn");
 results = $("#results");
+faraamQuoteDisplay = $("#faraamQuote");
 
 
-
-submitBtn.click(submitClick)
+let faraamQuotes = [
+    "why are you wearing pants?"
+]
 
 function submitClick() {
 
@@ -22,3 +24,7 @@ function submitClick() {
         alert("Please select a valid date and time.")
     }
 }
+    
+faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
+
+submitBtn.click(submitClick);

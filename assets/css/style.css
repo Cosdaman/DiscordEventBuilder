@@ -2,10 +2,24 @@ body{
     background-color: antiquewhite;
 }
 
+
+
+textarea{
+    min-height: 75vh;
+}
+
+
 #resultsDisplay{
     font-size: larger;
 }
 
-textarea{
-    min-height: 50vh;
+#faraamQuoteDiv{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+#faraamQuoteDiv > p{
+margin-bottom: 0px;
 }
