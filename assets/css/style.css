@@ -1,25 +1,22 @@
-body{
+body {
     background-color: antiquewhite;
 }
 
-
-
-textarea{
+textarea {
     min-height: 75vh;
 }
 
-
-#resultsDisplay{
+#resultsDisplay {
     font-size: larger;
 }
 
-#faraamQuoteDiv{
-    display:flex;
+#faraamQuoteDiv {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1vh;
 }
 
-#faraamQuoteDiv > p{
-margin-bottom: 0px;
+#faraamQuoteDiv>p {
+    margin-bottom: 0px;
 }
