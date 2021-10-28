@@ -23,7 +23,7 @@ function submitClick() {
         results.text(
             epochTime + "\n\n"
             + "**" + titleInput + "**" + "\n\n"
-            + "```"+descInput+"```");
+            + descInput);
     }
     else {
         alert("Please select a valid date and time.")
