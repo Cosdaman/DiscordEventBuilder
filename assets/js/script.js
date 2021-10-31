@@ -17,20 +17,24 @@ function submitClick() {
     let titleInput = $("#titleInput").val();
     let descInput = $("#descInput").val();
     let timeFormat = $("#timeFormat").val();
+
+    if (titleInput != "") {
+        titleInput = "\n\n" + "**" + titleInput + "**";
+    }
+
+    if (descInput != "") {
+        descInput = "\n\n" + descInput;
+    }
+
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-
         results.text(
-            epochTime + "\n\n"
-            + "**" + titleInput + "**" + "\n\n"
-            + descInput);
+            epochTime + titleInput + descInput);
     }
     else {
         alert("Please select a valid date and time.")
     }
 }
-
-
 
 faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
 
