@@ -9,9 +9,24 @@ mythicBtn = $("#mythicBtn");
 mythicCounter = $("#mythicCounter");
 
 
+
 let faraamQuotes = [
-    "why are you wearing pants?"
+    "https://cdn.discordapp.com/attachments/799488351543361547/904505982498013194/ffxiv_10212021_185012_871.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904505983269740564/ffxiv_10212021_191133_936.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506033341337640/ffxiv_09282021_215211_186.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506158495170600/ffxiv_20210713_234320_714.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506513702387722/ffxiv_20210830_011259_929.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506542320144455/ffxiv_20210904_004652_814_01.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506605779963934/ffxiv_20210908_201545_766.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506687329812500/ffxiv_20210912_200831_872.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506710759186443/ffxiv_20210916_204101_020.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506743076306964/ffxiv_20210919_234119_391.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506743852253244/ffxiv_20210921_184849_698.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904506745823576094/ffxiv_20211011_framboobass.jpg",
+    "https://cdn.discordapp.com/attachments/799488351543361547/904507682424250418/ffxiv_10232021_204849_470.png"
 ]
+
+let randomFaraamQuote = faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)];
 
 function submitClick() {
 
@@ -61,8 +76,7 @@ function mythicClickCount() {
 //https://api.countapi.xyz/set/mythicCounter/cosdamanv2?value=0
 
 
-
-faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
+faraamQuoteDisplay.attr("src", randomFaraamQuote);
 mythicInitDisplay();
 submitBtn.click(submitClick);
 mythicBtn.click(mythicClickCount);
