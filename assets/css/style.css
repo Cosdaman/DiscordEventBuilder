@@ -1,3 +1,7 @@
+:root {
+    --mythicColor: #feb4ce;
+}
+
 body {
     background-color: antiquewhite;
 }
@@ -6,7 +10,7 @@ body {
     min-height: 75vh;
 }
 
-#descInput{
+#descInput {
     min-height: 25vh;
 }
 
@@ -14,7 +18,8 @@ body {
     font-size: larger;
 }
 
-#faraamQuoteDiv {
+#faraamQuoteDiv,
+#mythicBtnDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,4 +28,10 @@ body {
 
 #faraamQuoteDiv>p {
     margin-bottom: 0px;
+}
+
+#mythicBtn {
+    color: white;
+    border-color: var(--mythicColor);
+    background-color: var(--mythicColor);
 }

@@ -59,10 +59,14 @@
 
     <div id="faraamQuoteDiv" class="container d-flex justify-content-center mb-3">
         <p>Faraam's Quote of the Moment:</p>
-        <p id="faraamQuote" class="text-center text-muted">
-
-        </p>
+        <p id="faraamQuote" class="text-center text-muted"></p>
     </div>
+
+    <div id="mythicBtnDiv">
+        <button type="button" class="btn btn-primary" id="mythicBtn">Mythic</button>
+        <p id="mythicBtnCounter"> Mythic's button has been pressed <span id="mythicCounter"></span> times.</p>
+    </div>
+
 
     <div>
         <footer class="footer mt-auto py-3 bg-light">
@@ -85,6 +89,7 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+
     <script>
         kofiWidgetOverlay.draw('cosdaman', {
             'type': 'floating-chat',

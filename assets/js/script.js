@@ -5,6 +5,8 @@ dateTime = $("#dateTime");
 submitBtn = $("#submitBtn");
 results = $("#results");
 faraamQuoteDisplay = $("#faraamQuote");
+mythicBtn = $("#mythicBtn");
+mythicCounter = $("#mythicCounter");
 
 
 let faraamQuotes = [
@@ -36,6 +38,26 @@ function submitClick() {
     }
 }
 
-faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
+function mythicClickCount() {
+    fetch('https://api.countapi.xyz/hit/mythicCounter')
+        .then(response => response.json())
+        .then(
+            function (data) {
+                mythicCounter.text(data.value)
+            });
+}
 
+function mythicInitDisplay() {
+    fetch('https://api.countapi.xyz/get/mythicCounter')
+        .then(response => response.json())
+        .then(
+            function (data) {
+                mythicCounter.text(data.value)
+            });
+}
+
+faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
+mythicInitDisplay();
 submitBtn.click(submitClick);
+mythicBtn.click(mythicClickCount);
+
