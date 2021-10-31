@@ -38,8 +38,8 @@ function submitClick() {
     }
 }
 
-function mythicClickCount() {
-    fetch('https://api.countapi.xyz/hit/mythicCounter')
+function mythicInitDisplay() {
+    fetch('https://api.countapi.xyz/get/mythicCounter/cosdamanv2')
         .then(response => response.json())
         .then(
             function (data) {
@@ -47,14 +47,16 @@ function mythicClickCount() {
             });
 }
 
-function mythicInitDisplay() {
-    fetch('https://api.countapi.xyz/get/mythicCounter')
+function mythicClickCount() {
+    fetch('https://api.countapi.xyz/hit/mythicCounter/cosdamanv2')
         .then(response => response.json())
         .then(
             function (data) {
                 mythicCounter.text(data.value)
             });
 }
+
+
 
 faraamQuoteDisplay.text(faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)]);
 mythicInitDisplay();
