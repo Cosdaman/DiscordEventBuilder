@@ -6,6 +6,11 @@ body {
     background-color: antiquewhite;
 }
 
+#titleHeader::after,
+#titleHeader::before{
+content: url(https://cdn.discordapp.com/attachments/895819182673887242/904505077526589470/lwain-memberwhendayisdark-56x56.png);
+}
+
 #results {
     min-height: 75vh;
 }

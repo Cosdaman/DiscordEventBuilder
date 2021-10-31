@@ -38,6 +38,7 @@ function submitClick() {
     }
 }
 
+//count api
 function mythicInitDisplay() {
     fetch('https://api.countapi.xyz/get/mythicCounter/cosdamanv2')
         .then(response => response.json())
@@ -55,6 +56,9 @@ function mythicClickCount() {
                 mythicCounter.text(data.value)
             });
 }
+
+//secret set value to 0 link
+//https://api.countapi.xyz/set/mythicCounter/cosdamanv2?value=0
 
 
 
