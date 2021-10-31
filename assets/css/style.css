@@ -6,9 +6,13 @@ body {
     background-color: antiquewhite;
 }
 
-#titleHeader::after,
-#titleHeader::before{
-content: url(https://cdn.discordapp.com/attachments/895819182673887242/904505077526589470/lwain-memberwhendayisdark-56x56.png);
+#titleHeader::after, #titleHeader::before {
+    content: url(https://cdn.discordapp.com/attachments/895819182673887242/904505077526589470/lwain-memberwhendayisdark-56x56.png);
+}
+
+#titleHeader {
+    display: flex;
+    align-items: center;
 }
 
 #results {
@@ -23,8 +27,7 @@ content: url(https://cdn.discordapp.com/attachments/895819182673887242/904505077
     font-size: larger;
 }
 
-#faraamQuoteDiv,
-#mythicBtnDiv {
+#faraamQuoteDiv, #mythicBtnDiv {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -8,8 +8,6 @@ faraamQuoteDisplay = $("#faraamQuote");
 mythicBtn = $("#mythicBtn");
 mythicCounter = $("#mythicCounter");
 
-
-
 let faraamQuotes = [
     "https://cdn.discordapp.com/attachments/799488351543361547/904505982498013194/ffxiv_10212021_185012_871.png",
     "https://cdn.discordapp.com/attachments/799488351543361547/904505983269740564/ffxiv_10212021_191133_936.png",
@@ -35,18 +33,11 @@ function submitClick() {
     let descInput = $("#descInput").val();
     let timeFormat = $("#timeFormat").val();
 
-    if (titleInput != "") {
-        titleInput = "\n\n" + "**" + titleInput + "**";
-    }
-
-    if (descInput != "") {
-        descInput = "\n\n" + descInput;
-    }
-
+    if (titleInput != "") { titleInput = "\n\n" + "**" + titleInput + "**"; }
+    if (descInput != "") { descInput = "\n\n" + descInput; }
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-        results.text(
-            epochTime + titleInput + descInput);
+        results.text(epochTime + titleInput + descInput);
     }
     else {
         alert("Please select a valid date and time.")
@@ -75,9 +66,7 @@ function mythicClickCount() {
 //secret set value to 0 link
 //https://api.countapi.xyz/set/mythicCounter/cosdamanv2?value=0
 
-
 faraamQuoteDisplay.attr("src", randomFaraamQuote);
 mythicInitDisplay();
 submitBtn.click(submitClick);
 mythicBtn.click(mythicClickCount);
-
