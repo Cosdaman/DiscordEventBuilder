@@ -108,6 +108,8 @@ function mythicClickCount() {
 
 //secret link
 //bnnjm://ujc.wiohnujc.rst/myn/gsnbcwWiohnyl/wimxuguhp2?pufoy=0
+//alternative link
+//https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoibW1KWHVJZERMNHAxdmdvTWRNUVdiWnBuTnRJRW9hTURldjRnQm1FbXRRNXp0QUUxRDZ2N3A0eTRnYXNIVHM0QlVrYnVackhqZm82RFNyT2lzbXdvb0NPWWxpU3lZWkRkWktSenRlMD0iLCJoIjoicmliYml0LCBpZiB5b3UgZW50ZXIgdGhlIGNvcnJlY3QgcGFzc3dvcmQsIHRoZSBjb3VudGVyIHdpbGwgcmVzZXQgdG8gMCIsImkiOiJ1ZWhqVmtXM2x0NEZseWQ5In0=
 
 
 let storedDatePref = JSON.parse(localStorage.getItem("datePreference"));
