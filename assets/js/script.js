@@ -48,7 +48,7 @@ function submitClick() {
     else {
         alert("Please select a valid date and time.")
     }
-    
+
     datePref = timeFormat;
     localStorage.setItem("datePreference", JSON.stringify(datePref));
 }
@@ -80,7 +80,7 @@ let storedDatePref = JSON.parse(localStorage.getItem("datePreference"));
 
 if (storedDatePref !== null || storedDatePref !== undefined) {
     datePref = storedDatePref;
-    $("[value='"+datePref+"']").attr('selected',"");
+    $("[value='" + datePref + "']").attr('selected', "");
 }
 
 faraamQuoteDisplay.attr("src", randomFaraamQuote);
