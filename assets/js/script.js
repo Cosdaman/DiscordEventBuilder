@@ -107,7 +107,7 @@ function mythicClickCount() {
 
 
 //secret link
-//https://api.countapi.xyz/set/mythicCounter/cosdamanv2?value=0
+//https://api.countapi.xyz/info/mythicCounter/cosdamanv2
 
 
 let storedDatePref = JSON.parse(localStorage.getItem("datePreference"));
