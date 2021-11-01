@@ -65,7 +65,8 @@
     </div>
 
     <div id="mythicBtnDiv">
-        <button type="button" class="btn btn-primary" id="mythicBtn">Mythic</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left"
+            title="www.twitch.tv/mythicrwby" id="mythicBtn">Mythic</button>
         <p id="mythicBtnCounter"> Mythic's button has been pressed <span id="mythicCounter"></span> times.</p>
     </div>
 
@@ -93,7 +94,7 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-
+    <script src='https://unpkg.com/@popperjs/core@2'></script>
     <script>
         kofiWidgetOverlay.draw('cosdaman', {
             'type': 'floating-chat',

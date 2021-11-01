@@ -31,6 +31,12 @@ let faraamQuotes = [
 //process variables
 let randomFaraamQuote = faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)];
 
+//tooltip init
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 function submitClick() {
 
     let timeInput = dayjs(dateTime.val());
