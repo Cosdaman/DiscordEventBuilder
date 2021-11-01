@@ -5,8 +5,9 @@ let dateTime = $("#dateTime");
 let submitBtn = $("#submitBtn");
 let results = $("#results");
 let faraamQuoteDisplay = $("#faraamQuote");
-let mythicBtn = $("#mythicBtn");
+let mythicBtn = $('#mythicBtn');
 let mythicCounter = $("#mythicCounter");
+
 
 //placeholder vars
 let datePref;
@@ -27,14 +28,19 @@ let faraamQuotes = [
     "https://cdn.discordapp.com/attachments/799488351543361547/904506745823576094/ffxiv_20211011_framboobass.jpg",
     "https://cdn.discordapp.com/attachments/799488351543361547/904507682424250418/ffxiv_10232021_204849_470.png"
 ]
+let mythicLinks = [
+    "twitter.com/MythicRWBY",
+    "twitch.tv/mythicrwby"
+]
 
 //process variables
 let randomFaraamQuote = faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)];
+let mythicTooltip = new bootstrap.Tooltip(mythicBtn)
 
 //tooltip init
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+    return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
 function submitClick() {
@@ -75,8 +81,24 @@ function mythicClickCount() {
         .then(
             function (data) {
                 mythicCounter.text(data.value)
+                // let rngNum = Math.floor(Math.random() * 10)
+                // console.log(rngNum)
+                // if (rngNum < 5) {
+                //     console.log(mythicTooltip)
+                //     mythicTooltip.addEventListener('hidden.bs.tooltip', function () {
+
+                //         mythicBtn.attr('title', mythicLinks[0])
+                //     })
+                //     mythicTooltip.hide();
+                //     mythicTooltip.show();
+                //     console.log(mythicBtn.attr('title'))
+                // }
             });
 }
+
+Math.floor(Math.random() * faraamQuotes.length)
+
+
 
 //secret set value to 0 link
 //https://api.countapi.xyz/set/mythicCounter/cosdamanv2?value=0
