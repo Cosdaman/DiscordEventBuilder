@@ -8,7 +8,6 @@ let faraamQuoteDisplay = $("#faraamQuote");
 let mythicBtn = $('#mythicBtn');
 let mythicCounter = $("#mythicCounter");
 
-
 //placeholder vars
 let datePref;
 
@@ -37,6 +36,7 @@ let mythicLinks = [
 let randomFaraamQuote = faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)];
 
 //tippy init
+//notes: tippy can't use jquery 
 const mythicButton = document.querySelector("#mythicBtn")
 tippy(mythicButton);
 const tippyInst = mythicButton._tippy;
@@ -100,18 +100,6 @@ function mythicClickCount() {
         .then(
             function (data) {
                 mythicCounter.text(data.value)
-                // let rngNum = Math.floor(Math.random() * 2)
-                // if (rngNum < 1) {
-                //     tippyInst.setProps({
-                //         content: mythicLinks[rngNum],
-                //         placement: 'left',
-                //     })
-                // } else {
-                //     tippyInst.setProps({
-                //         content: mythicLinks[rngNum],
-                //         placement: 'right',
-                //     })
-                // }
             });
 }
 
