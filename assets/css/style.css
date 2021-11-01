@@ -7,7 +7,7 @@
 
 
 
-body, p {
+body, p, .btn, .btn:focus, footer{
     background-color: var(--darkColor);
     color: var(--textColor);
 }
@@ -59,4 +59,5 @@ body, p {
     color: white;
     border-color: var(--mythicColor);
     background-color: var(--mythicColor);
+    margin-bottom: 2vh;
 }

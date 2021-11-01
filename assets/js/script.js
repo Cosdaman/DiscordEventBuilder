@@ -35,14 +35,33 @@ let mythicLinks = [
 
 //process variables
 let randomFaraamQuote = faraamQuotes[Math.floor(Math.random() * faraamQuotes.length)];
-let mythicTooltip = new bootstrap.Tooltip(mythicBtn)
 
-//tooltip init
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
+//tippy init
+const mythicButton = document.querySelector("#mythicBtn")
+tippy(mythicButton);
+const tippyInst = mythicButton._tippy;
+
+//tippy settings
+tippyInst.setProps({
+    placement: 'left',
+    arrow: true,
+    trigger: 'click',
+    hideonClick: "toggle",
+    onShow(instance) {
+        let rngNum = Math.floor(Math.random() * 2)
+        if (rngNum < 1) {
+            tippyInst.setProps({
+                content: mythicLinks[rngNum], placement: 'left',
+            })
+        } else {
+            tippyInst.setProps({
+                content: mythicLinks[rngNum], placement: 'right',
+            })
+        }
+    },
 })
 
+//functions
 function submitClick() {
 
     let timeInput = dayjs(dateTime.val());
@@ -81,26 +100,25 @@ function mythicClickCount() {
         .then(
             function (data) {
                 mythicCounter.text(data.value)
-                // let rngNum = Math.floor(Math.random() * 10)
-                // console.log(rngNum)
-                // if (rngNum < 5) {
-                //     console.log(mythicTooltip)
-                //     mythicTooltip.addEventListener('hidden.bs.tooltip', function () {
-
-                //         mythicBtn.attr('title', mythicLinks[0])
+                // let rngNum = Math.floor(Math.random() * 2)
+                // if (rngNum < 1) {
+                //     tippyInst.setProps({
+                //         content: mythicLinks[rngNum],
+                //         placement: 'left',
                 //     })
-                //     mythicTooltip.hide();
-                //     mythicTooltip.show();
-                //     console.log(mythicBtn.attr('title'))
+                // } else {
+                //     tippyInst.setProps({
+                //         content: mythicLinks[rngNum],
+                //         placement: 'right',
+                //     })
                 // }
             });
 }
 
-Math.floor(Math.random() * faraamQuotes.length)
 
 
 
-//secret set value to 0 link
+//secret link
 //https://api.countapi.xyz/set/mythicCounter/cosdamanv2?value=0
 
 
