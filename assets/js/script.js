@@ -103,9 +103,6 @@ function mythicClickCount() {
             });
 }
 
-
-
-
 //secret link
 //bnnjm://ujc.wiohnujc.rst/myn/gsnbcwWiohnyl/wimxuguhp2?pufoy=0
 //alternative link

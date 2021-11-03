@@ -5,23 +5,23 @@
     --textColor: #e4e6eb;
 }
 
-
-
-body, p, .btn, .btn:focus, footer{
+body, p, .btn, .btn:focus, footer, h1 {
     background-color: var(--darkColor);
     color: var(--textColor);
 }
 
-.form-control, .form-select, textarea, .form-control:focus, .form-select:focus{
+.form-control, .form-select, textarea, .form-control:focus, .form-select:focus {
     background-color: var(--darkColor2);
 }
 
-.form-control::placeholder{
+.form-control::placeholder {
     color: black;
     opacity: 0.6;
 }
 
-
+h1 {
+    text-align: center;
+}
 
 #titleHeader::after, #titleHeader::before {
     content: url(https://cdn.discordapp.com/attachments/895819182673887242/904505077526589470/lwain-memberwhendayisdark-56x56.png);
@@ -60,4 +60,9 @@ body, p, .btn, .btn:focus, footer{
     border-color: var(--mythicColor);
     background-color: var(--mythicColor);
     margin-bottom: 2vh;
+}
+
+hr {
+    border-width: 0px;
+    visibility: hidden;
 }
