@@ -1,9 +1,9 @@
 # Basic Discord Event Builder
 
-Description:  
+# Description:  
   
 This application is designed to help users with event announcements for discord.  
-It is designed with the intention to lessen the need to visit the epoch time website.  
+It is designed with the intention to lessen the need to visit sites to convert epoch times.  
   
   
 Feel free to DM me for suggestions, you can reach me here:  
@@ -11,5 +11,8 @@ Feel free to DM me for suggestions, you can reach me here:
 - Twitter: @Cosdaman  
 
 
-Link to page:  
+# Link to page:  
 https://cosdaman.github.io/DiscordEventBuilder/
+
+# Screenshot:
+![image](https://user-images.githubusercontent.com/3162991/140001467-617b6057-fbe9-4f20-af6e-640697702539.png)
