@@ -7,7 +7,7 @@ It is designed with the intention to lessen the need to visit sites to convert e
   
   
 ## Contact Information:  
-Feel free to reach out to me for suggestions, you can reach me here:  
+Feel free to reach out, you can reach me through:  
 - Discord: Cosdaman#0001  
 - Twitter: @Cosdaman  
 - Email: Cosdaguy@gmail.com  
