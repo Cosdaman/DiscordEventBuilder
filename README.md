@@ -1,4 +1,4 @@
-# Basic Discord Event Builder
+## Basic Discord Event Builder
 
 # Description:  
   
