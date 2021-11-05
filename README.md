@@ -14,5 +14,12 @@ Feel free to DM me for suggestions, you can reach me here:
 # Link to page:  
 https://cosdaman.github.io/DiscordEventBuilder/
 
-# Screenshot:
+# Technologies Used:
+- Bootstrap
+- JQuery
+- PopperJS
+- TippyJS
+- DayJS
+
+# Screenshots:
 ![image](https://user-images.githubusercontent.com/3162991/140001467-617b6057-fbe9-4f20-af6e-640697702539.png)
