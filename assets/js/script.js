@@ -25,7 +25,9 @@ let faraamQuotes = [
     "https://cdn.discordapp.com/attachments/799488351543361547/904506743076306964/ffxiv_20210919_234119_391.png",
     "https://cdn.discordapp.com/attachments/799488351543361547/904506743852253244/ffxiv_20210921_184849_698.png",
     "https://cdn.discordapp.com/attachments/799488351543361547/904506745823576094/ffxiv_20211011_framboobass.jpg",
-    "https://cdn.discordapp.com/attachments/799488351543361547/904507682424250418/ffxiv_10232021_204849_470.png"
+    "https://cdn.discordapp.com/attachments/799488351543361547/904507682424250418/ffxiv_10232021_204849_470.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/907151347848183808/consume.png",
+    "https://cdn.discordapp.com/attachments/799488351543361547/907151358224912384/dummythicc.png"
 ]
 let mythicLinks = [
     "twitter.com/MythicRWBY",
