@@ -1,5 +1,8 @@
 console.log("js script connected")
 
+// var timezone = require('dayjs/plugin/timezone')
+// dayjs.extend(timezone);
+
 //dom selection
 let dateTime = $("#dateTime");
 let submitBtn = $("#submitBtn");
@@ -7,6 +10,7 @@ let results = $("#results");
 let faraamQuoteDisplay = $("#faraamQuote");
 let mythicBtn = $('#mythicBtn');
 let mythicCounter = $("#mythicCounter");
+let threadTitle = $('#resultsThread');
 
 //placeholder vars
 let datePref;
@@ -49,7 +53,7 @@ tippyInst.setProps({
     placement: 'left',
     arrow: true,
     trigger: 'click',
-    hideonClick: "toggle",
+    hideonClick: "true",
     onShow(instance) {
         let rngNum = Math.floor(Math.random() * 2)
         if (rngNum < 1) {
@@ -71,13 +75,16 @@ function submitClick() {
     let titleInput = $("#titleInput").val();
     let descInput = $("#descInput").val();
     let timeFormat = $("#timeFormat").val();
+    let threadTitleTitle = titleInput;
 
     if (titleInput != "") { titleInput = "\n\n" + "**" + titleInput + "**"; }
     if (descInput != "") { descInput = "\n\n" + descInput; }
 
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
+        let threadTitleContent = dayjs(timeInput).format("ddd || MMM DD || UTC: ZZ || ")
         results.text(epochTime + titleInput + descInput);
+        threadTitle.text(threadTitleContent + threadTitleTitle);
     }
     else {
         alert("Please select a valid date and time.")
