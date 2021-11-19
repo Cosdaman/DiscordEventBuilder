@@ -14,6 +14,11 @@ body, p, .btn, .btn:focus, footer, h1 {
     background-color: var(--darkColor2);
 }
 
+textarea{
+    border-radius: 5px;
+    resize: none;
+}
+
 .form-control::placeholder {
     color: black;
     opacity: 0.6;
@@ -66,3 +71,20 @@ hr {
     border-width: 0px;
     visibility: hidden;
 }
+
+.externalLinks::before {
+    content: "";
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+
+#github::before {
+    background: url(../logos/githubicon.png);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }

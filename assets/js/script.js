@@ -1,8 +1,5 @@
 console.log("js script connected")
 
-// var timezone = require('dayjs/plugin/timezone')
-// dayjs.extend(timezone);
-
 //dom selection
 let dateTime = $("#dateTime");
 let submitBtn = $("#submitBtn");
@@ -82,7 +79,7 @@ function submitClick() {
 
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-        let threadTitleContent = dayjs(timeInput).format("ddd || MMM DD || UTC: ZZ || ")
+        let threadTitleContent = dayjs(timeInput).format("ddd|MMM DD|UTC: ZZ| ")
         results.text(epochTime + titleInput + descInput);
         threadTitle.text(threadTitleContent + threadTitleTitle);
     }
