@@ -71,20 +71,3 @@ hr {
     border-width: 0px;
     visibility: hidden;
 }
-
-.externalLinks::before {
-    content: "";
-    width: 48px;
-    height: 48px;
-    float: left;
-}
-
-#github::before {
-    background: url(../logos/githubicon.png);
-}
-
-.links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
