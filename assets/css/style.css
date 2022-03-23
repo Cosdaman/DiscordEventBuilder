@@ -71,3 +71,7 @@ hr {
     border-width: 0px;
     visibility: hidden;
 }
+
+.btn {
+    margin-top: 1vh;
+}

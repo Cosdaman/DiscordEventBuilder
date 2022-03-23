@@ -1,5 +1,3 @@
-console.log("js script connected")
-
 //dom selection
 let dateTime = $("#dateTime");
 let submitBtn = $("#submitBtn");
@@ -8,6 +6,7 @@ let faraamQuoteDisplay = $("#faraamQuote");
 let mythicBtn = $('#mythicBtn');
 let mythicCounter = $("#mythicCounter");
 let threadTitle = $('#resultsThread');
+let retrieveBtn = $('#retrieveBtn');
 
 //placeholder vars
 let datePref;
@@ -77,17 +76,25 @@ function submitClick() {
     if (titleInput != "") { titleInput = "\n\n" + "**" + titleInput + "**"; }
     if (descInput != "") { descInput = "\n\n" + descInput; }
 
+    //validate if there is an actual date time
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-        let threadTitleContent = dayjs(timeInput).format("ddd|MMM DD|UTC: ZZ| ")
-        results.text(epochTime + titleInput + descInput);
-        threadTitle.text(threadTitleContent + threadTitleTitle);
+        let threadTitleContent = dayjs(timeInput).format("ddd|MMM DD| ")
+        let resultText = epochTime + titleInput + descInput
+        let threadTitleText = threadTitleContent + threadTitleTitle
+        results.text(resultText);
+        threadTitle.text(threadTitleText);
+
+        //save last event to local storage for later retrieval
+        localStorage.setItem("lastEventDesc", JSON.stringify(results.val()))
+        localStorage.setItem("lastEventThread", JSON.stringify(threadTitle.val()))
     }
     else {
         alert("Please select a valid date and time.")
     }
 
     datePref = timeFormat;
+
     localStorage.setItem("datePreference", JSON.stringify(datePref));
 }
 
@@ -110,12 +117,20 @@ function mythicClickCount() {
             });
 }
 
+function retrieveEventClick() {
+    let lastEventDesc = JSON.parse(localStorage.getItem("lastEventDesc"));
+    let lastEventThread = JSON.parse(localStorage.getItem("lastEventThread"));
+    results.text(lastEventDesc)
+    threadTitle.text(lastEventThread)
+}
+
 //secret link
 //bnnjm://ujc.wiohnujc.rst/myn/gsnbcwWiohnyl/wimxuguhp2?pufoy=0
 //alternative link
 //https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoibW1KWHVJZERMNHAxdmdvTWRNUVdiWnBuTnRJRW9hTURldjRnQm1FbXRRNXp0QUUxRDZ2N3A0eTRnYXNIVHM0QlVrYnVackhqZm82RFNyT2lzbXdvb0NPWWxpU3lZWkRkWktSenRlMD0iLCJoIjoicmliYml0LCBpZiB5b3UgZW50ZXIgdGhlIGNvcnJlY3QgcGFzc3dvcmQsIHRoZSBjb3VudGVyIHdpbGwgcmVzZXQgdG8gMCIsImkiOiJ1ZWhqVmtXM2x0NEZseWQ5In0=
 
 
+//retrieve preferred date format and set as default
 let storedDatePref = JSON.parse(localStorage.getItem("datePreference"));
 
 if (storedDatePref !== null || storedDatePref !== undefined) {
@@ -127,3 +142,4 @@ faraamQuoteDisplay.attr("src", randomFaraamQuote);
 mythicInitDisplay();
 submitBtn.click(submitClick);
 mythicBtn.click(mythicClickCount);
+retrieveBtn.click(retrieveEventClick);
