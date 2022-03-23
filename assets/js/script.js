@@ -120,8 +120,12 @@ function mythicClickCount() {
 function retrieveEventClick() {
     let lastEventDesc = JSON.parse(localStorage.getItem("lastEventDesc"));
     let lastEventThread = JSON.parse(localStorage.getItem("lastEventThread"));
-    results.text(lastEventDesc)
-    threadTitle.text(lastEventThread)
+    if (lastEventDesc == null) {
+        alert('No data for last entry available.')
+    } else {
+        results.text(lastEventDesc)
+        threadTitle.text(lastEventThread)
+    }
 }
 
 //secret link
