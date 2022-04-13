@@ -67,6 +67,13 @@ tippyInst.setProps({
 //functions
 function submitClick() {
 
+    fetch('https://api.countapi.xyz/hit/mythicCounter/cosdamanv2')
+        .then(response => response.json())
+        .then(
+            function (data) {
+                mythicCounter.text(data.value)
+            });
+
     let timeInput = dayjs(dateTime.val());
     let titleInput = $("#titleInput").val();
     let descInput = $("#descInput").val();
