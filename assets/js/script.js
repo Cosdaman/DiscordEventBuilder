@@ -86,9 +86,8 @@ function submitClick() {
     //validate if there is an actual date time
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-        let threadTitleContent = dayjs(timeInput).format("ddd|MMM DD| ")
         let resultText = epochTime + titleInput + descInput
-        let threadTitleText = threadTitleContent + threadTitleTitle
+        let threadTitleText = threadTitleTitle
         results.text(resultText);
         threadTitle.text(threadTitleText);
 
