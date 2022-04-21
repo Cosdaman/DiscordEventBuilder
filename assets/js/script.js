@@ -87,9 +87,8 @@ function submitClick() {
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
         let resultText = epochTime + titleInput + descInput
-        let threadTitleText = threadTitleTitle
         results.text(resultText);
-        threadTitle.text(threadTitleText);
+        threadTitle.text(threadTitleTitle);
 
         //save last event to local storage for later retrieval
         localStorage.setItem("lastEventDesc", JSON.stringify(results.val()))
