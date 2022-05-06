@@ -80,13 +80,13 @@ function submitClick() {
     let timeFormat = $("#timeFormat").val();
     let threadTitleTitle = titleInput;
 
-    if (titleInput != "") { titleInput = "\n\n" + "**" + titleInput + "**"; }
+    if (titleInput != "") { titleInput = "**" + titleInput + "**" + "\n\n"; }
     if (descInput != "") { descInput = "\n\n" + descInput; }
 
     //validate if there is an actual date time
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-        let resultText = epochTime + titleInput + descInput
+        let resultText = titleInput +  epochTime + descInput
         results.text(resultText);
         threadTitle.text(threadTitleTitle);
 
