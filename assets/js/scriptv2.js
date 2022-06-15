@@ -110,6 +110,7 @@ function mythicInitDisplay() {
         .then(
             function (data) {
                 mythicCounter.text(data.value)
+                //size of button grows with value
                 mythicBtn.css("font-size", Math.log2(data.value)*1.5)
             });
 }
