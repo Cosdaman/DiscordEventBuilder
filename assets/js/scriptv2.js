@@ -110,6 +110,7 @@ function mythicInitDisplay() {
         .then(
             function (data) {
                 mythicCounter.text(data.value)
+                mythicBtn.css("font-size", Math.log2(data.value)*1.5)
             });
 }
 
@@ -152,3 +153,5 @@ mythicInitDisplay();
 submitBtn.click(submitClick);
 mythicBtn.click(mythicClickCount);
 retrieveBtn.click(retrieveEventClick);
+
+

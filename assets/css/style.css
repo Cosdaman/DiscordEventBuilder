@@ -64,7 +64,6 @@ h1 {
     color: white;
     border-color: var(--mythicColor);
     background-color: var(--mythicColor);
-    margin-bottom: 2vh;
 }
 
 hr {
@@ -72,6 +71,3 @@ hr {
     visibility: hidden;
 }
 
-.btn {
-    margin-top: 1vh;
-}
