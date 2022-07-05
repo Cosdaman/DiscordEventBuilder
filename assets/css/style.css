@@ -17,6 +17,7 @@ body, p, .btn, .btn:focus, footer, h1 {
 textarea{
     border-radius: 5px;
     resize: none;
+    margin-bottom: 16px
 }
 
 .form-control::placeholder {
@@ -38,7 +39,7 @@ h1 {
 }
 
 #results {
-    min-height: 55vh;
+    min-height: 50vh;
 }
 
 #descInput {

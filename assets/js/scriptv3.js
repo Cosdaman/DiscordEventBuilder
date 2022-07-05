@@ -7,6 +7,7 @@ let mythicBtn = $('#mythicBtn');
 let mythicCounter = $("#mythicCounter");
 let threadTitle = $('#resultsThread');
 let retrieveBtn = $('#retrieveBtn');
+let copyBtn = $('#copyBtn');
 
 //placeholder vars
 let datePref;
@@ -80,7 +81,6 @@ function submitClick() {
     let titleInput = $("#titleInput").val();
     let descInput = $("#descInput").val();
     let timeFormat = $("#timeFormat").val();
-    let threadTitleTitle = titleInput;
 
     if (titleInput != "") { titleInput = "**" + titleInput + "**" + "\n\n"; }
     if (descInput != "") { descInput = "\n\n" + descInput; }
@@ -88,13 +88,11 @@ function submitClick() {
     //validate if there is an actual date time
     if (dayjs(timeInput).isValid()) {
         let epochTime = "<t:" + dayjs(timeInput).unix() + ":" + timeFormat + ">";
-        let resultText = titleInput +  epochTime + descInput
+        let resultText = titleInput + epochTime + descInput
         results.text(resultText);
-        threadTitle.text(threadTitleTitle);
 
         //save last event to local storage for later retrieval
         localStorage.setItem("lastEventDesc", JSON.stringify(results.val()))
-        localStorage.setItem("lastEventThread", JSON.stringify(threadTitle.val()))
     }
     else {
         alert("Please select a valid date and time.")
@@ -113,7 +111,7 @@ function mythicInitDisplay() {
             function (data) {
                 mythicCounter.text(data.value)
                 //size of button grows with value
-                mythicBtn.css("font-size", Math.log2(data.value)*1.5)
+                mythicBtn.css("font-size", Math.log2(data.value) * 1.5)
             });
 }
 
@@ -128,13 +126,17 @@ function mythicClickCount() {
 
 function retrieveEventClick() {
     let lastEventDesc = JSON.parse(localStorage.getItem("lastEventDesc"));
-    let lastEventThread = JSON.parse(localStorage.getItem("lastEventThread"));
     if (lastEventDesc == null) {
         alert('No data for last entry available.')
     } else {
         results.text(lastEventDesc)
-        threadTitle.text(lastEventThread)
     }
+}
+
+function copyClick() {
+    results.select();
+    results[0].setSelectionRange(0, 99999); /* For mobile devices */
+    navigator.clipboard.writeText(results[0].value);
 }
 
 //secret link
@@ -156,5 +158,6 @@ mythicInitDisplay();
 submitBtn.click(submitClick);
 mythicBtn.click(mythicClickCount);
 retrieveBtn.click(retrieveEventClick);
+copyBtn.click(copyClick);
 
 
