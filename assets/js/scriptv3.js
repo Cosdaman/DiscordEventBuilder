@@ -31,7 +31,10 @@ let faraamQuotes = [
     "https://cdn.discordapp.com/attachments/799488351543361547/907151358224912384/dummythicc.png",
     "https://cdn.discordapp.com/attachments/799488351543361547/909129961871384626/20211016_noratsinalaska.jpg",
     "https://cdn.discordapp.com/attachments/799488351543361547/988241303915618314/buttplugin.png",
-    "https://cdn.discordapp.com/attachments/799488351543361547/988241395779260486/titannipple.png"
+    "https://cdn.discordapp.com/attachments/799488351543361547/988241395779260486/titannipple.png",
+    "https://cdn.discordapp.com/attachments/870937476972281877/1013268444852002836/quote.PNG",
+    "https://cdn.discordapp.com/attachments/870937476972281877/1012891272995942440/SPOILER_fram.PNG",
+    "https://cdn.discordapp.com/attachments/870937476972281877/1012914153968648243/why.PNG"
 ]
 let mythicLinks = [
     "twitter.com/MythicRWBY",
